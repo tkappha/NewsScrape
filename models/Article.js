@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 // Create article schema
 var ArticleSchema = new Schema({
   // title is a required string
-  title: {
+  headline: {
     type: String,
     required: true
   },
@@ -13,6 +13,10 @@ var ArticleSchema = new Schema({
   link: {
     type: String,
     required: true
+  },
+  //summary of the article
+  summary: {
+    type: String
   },
   // This only saves one note's ObjectId, ref refers to the Note model
   note: {
